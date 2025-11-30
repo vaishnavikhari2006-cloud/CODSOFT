@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch Store – Premium Watches</title>
+
+    <!-- Stylish Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cinzel', serif; }
+        body { background: #0d0d0d; color: #fff; overflow-x: hidden; }
+
+        /* NAVBAR */
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; position: fixed; width: 100%; top: 0; left: 0; backdrop-filter: blur(12px); background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 1000; }
+        .logo { font-size: 32px; font-weight: 800; color: #00eaff; text-shadow: 0 0 15px #00eaff; display: flex; align-items: center; gap: 10px; animation: rotateLogo 4s linear infinite; }
+        .navbar ul { list-style: none; display: flex; }
+        .navbar ul li { margin-left: 25px; }
+        .navbar ul li a { color: white; text-decoration: none; font-size: 18px; transition: 0.3s; position: relative; }
+        .navbar ul li a:hover { color: #00eaff; text-shadow: 0 0 10px #00eaff; }
+        .navbar ul li a::after { content: '\f061'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -20px; opacity: 0; transition: 0.3s; }
+        .navbar ul li a:hover::after { opacity: 1; transform: translateX(5px); }
+
+        /* HERO */
+        .hero { height: 100vh; background: url('https://images.unsplash.com/photo-1524594081293-190a2fe0baae') center/cover no-repeat; display: flex; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .hero-text h1 { font-size: 60px; animation: fadeInDown 1s ease-in-out; letter-spacing: 2px; }
+        .hero-text p { margin: 20px 0; font-size: 20px; animation: fadeInUp 1.3s ease-in-out; }
+
+        /* BUTTON */
+        .btn { background: linear-gradient(45deg, #00eaff, #0077ff); padding: 14px 30px; color: #fff; border-radius: 50px; text-decoration: none; font-size: 20px; display: inline-block; transition: 0.3s; box-shadow: 0 0 15px #00eaff; font-weight: 600; }
+        .btn:hover { box-shadow: 0 0 25px #00eaff, 0 0 50px #00eaff; transform: scale(1.05); }
+
+        /* ABOUT */
+        .about { padding: 100px 40px; text-align: center; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); margin: 60px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); }
+        .about h2 { font-size: 42px; margin-bottom: 25px; }
+
+        /* PRODUCTS */
+        .services { padding: 80px 20px; text-align: center; }
+        .services h2 { font-size: 42px; margin-bottom: 40px; }
+        .service-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 35px; padding: 0 40px; }
+        .card { padding: 25px; border-radius: 18px; background: rgba(255,255,255,0.05); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); text-align: center; transition: 0.3s; animation: floatCard 3s ease-in-out infinite alternate; }
+        .card:hover { transform: translateY(-15px) scale(1.05); box-shadow: 0 0 25px #00eaff; }
+        .card h3 { margin: 15px 0; font-size: 24px; text-shadow: 0 0 10px #00eaff; }
+        .card img { width: 100%; border-radius: 10px; transition: transform 0.3s; }
+        .card img:hover { transform: scale(1.05); }
+
+        /* FOOTER */
+        footer { background: #000; padding: 20px; text-align: center; color: #aaa; margin-top: 40px; }
+
+        /* ANIMATIONS */
+        @keyframes fadeInDown { 0% { opacity: 0; transform: translateY(-30px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes rotateLogo { 0% { transform: rotate(0deg); } 50% { transform: rotate(10deg); } 100% { transform: rotate(0deg); } }
+        @keyframes floatCard { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) { .hero-text h1 { font-size: 40px; } .hero-text p { font-size: 16px; } .navbar { padding: 15px 20px; } .about, .services { margin: 20px; padding: 40px 20px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo"><i class="fa-solid fa-watch"></i> WatchZone</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Watches</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Premium Watches for Premium People</h1>
+            <p>Experience luxury, precision, and unmatched craftsmanship.</p>
+            <a href="#services" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About WatchZone</h2>
+        <p>WatchZone brings you a curated collection of stylish, elegant, and technologically advanced watches. Our designs combine craftsmanship with innovation, offering you the perfect balance of fashion and functionality.</p>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Collection</h2>
+        <div class="service-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511376979163-f804dff7ad7f" />
+                <h3>Classic Leather Watch</h3>
+                <p>Elegant, timeless, and perfect for any formal outfit.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d" />
+                <h3>Smart Fitness Watch</h3>
+                <p>Track your goals with style and advanced technology.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" />
+                <h3>Metal Premium Watch</h3>
+                <p>Bold design with a touch of luxury.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Contact us at: support@watchzone.com</p>
+        <p>&copy; 2025 WatchZone — All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
